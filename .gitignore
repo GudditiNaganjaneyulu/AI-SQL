@@ -1,0 +1,6 @@
+.DS_Store
+bin/
+obj/
+*.dacpac
+deployreport.xml
+.env

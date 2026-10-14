@@ -3,93 +3,96 @@ version: 1
 site:
   title: DP-800 AI-Enabled Database Solutions Study Guide
   structure:
-    # Step 1 — learn SQL from the ground up before anything else.
+    # Stage 0 — orientation: the exam, the roadmap, and tools.
     - type: section
-      key: section-sql-foundations
-      title: 1. SQL Foundations
-      path: sql-foundations
-      description: Start here. Core SQL syntax, tables, filtering, joins, aggregations, subqueries, window functions and CASE, plus a quick-reference cheatsheet.
+      key: section-start-here
+      title: Start Here
+      path: start
+      description: The DP-800 exam, a 12-week beginner roadmap, and how to set up Azure SQL or SQL Server 2025 and VS Code.
       default: true
       children:
         - type: space
-          key: space-sql-fundamentals
-          title: SQL Fundamentals
-          path: fundamentals
+          key: space-start-here
+          title: Start Here
+          path: welcome
           default: true
           content:
-            directory: ./modules/01-sql-fundamentals
-        - type: space
-          key: space-sql-cheatsheet
-          title: SQL Quick Reference
-          path: cheatsheet
-          content:
-            directory: ./cheatsheets
+            directory: ./00-start-here
 
-    # Step 2 — database development and performance once basic queries are comfortable.
+    # Stages 1-3 — prerequisites a beginner needs before the exam domains.
     - type: section
-      key: section-database-development
-      title: 2. Database Development & Performance
-      path: database-development
-      description: CTEs, recursive queries, execution plans, indexing, transactions, isolation levels, locking, partitioning and materialized views.
+      key: section-learn-the-basics
+      title: Learn the Basics
+      path: basics
+      description: Database foundations, core T-SQL from SELECT to MERGE, and the SQL Server, Azure SQL and Fabric platform family.
       children:
         - type: space
-          key: space-advanced-sql
-          title: Advanced SQL & Query Optimization
-          path: advanced-sql
+          key: space-foundations
+          title: 1. Foundations
+          path: foundations
           default: true
           content:
-            directory: ./modules/02-advanced-sql
+            directory: ./01-foundations
+        - type: space
+          key: space-core-tsql
+          title: 2. Core T-SQL
+          path: core-tsql
+          content:
+            directory: ./02-core-tsql
+        - type: space
+          key: space-azure-sql-platform
+          title: 3. Azure SQL Platform
+          path: azure-sql-platform
+          content:
+            directory: ./03-azure-sql-platform
 
-    # Step 3 — the Azure SQL platform, security and monitoring.
+    # Stages 4-6 — the three official DP-800 skill domains, in exam order.
     - type: section
-      key: section-azure-sql
-      title: 3. Azure SQL Platform & Security
-      path: azure-sql
-      description: Azure SQL product family, service tiers, Always Encrypted, RLS, Dynamic Data Masking, ledger, Query Store, scale-out and backups.
+      key: section-exam-domains
+      title: DP-800 Exam Domains
+      path: exam-domains
+      description: Domain 1 design and develop (35-40%), Domain 2 secure, optimize and deploy (35-40%), Domain 3 AI capabilities (25-30%).
       children:
         - type: space
-          key: space-azure-sql
-          title: Azure SQL & Cloud Features
-          path: platform
+          key: space-design-and-develop
+          title: 4. Design and Develop
+          path: design-and-develop
           default: true
           content:
-            directory: ./modules/04-azure-sql
-
-    # Step 4 — AI capabilities, which build on SQL, indexing and Azure SQL.
-    - type: section
-      key: section-ai-integration
-      title: 4. AI in the Database
-      path: ai-integration
-      description: Embeddings, vector similarity search, ANN vector indexes, hybrid search with RRF, RAG, chat history and calling Azure OpenAI from SQL.
-      children:
+            directory: ./04-design-and-develop
         - type: space
-          key: space-ai-integration
-          title: AI Integration with SQL
-          path: vectors-and-rag
-          default: true
+          key: space-secure-optimize-deploy
+          title: 5. Secure, Optimize and Deploy
+          path: secure-optimize-deploy
           content:
-            directory: ./modules/03-ai-integration
+            directory: ./05-secure-optimize-deploy
+        - type: space
+          key: space-ai-capabilities
+          title: 6. AI Capabilities
+          path: ai-capabilities
+          content:
+            directory: ./06-ai-capabilities
 
-    # Step 5 — apply everything, then rehearse for the exam.
+    # Stages 7-8 — hands-on practice, then revision and exam preparation.
     - type: section
-      key: section-practice-exam-prep
-      title: 5. Practice & Exam Prep
+      key: section-practice-and-revision
+      title: Practice and Revision
       path: practice
-      description: Guided hands-on projects that combine every module, followed by 50 practice questions with answers and a scoring guide.
+      description: Nine guided labs with a lab database script, then a cheat sheet, knowledge checks, a 40-question practice exam and a revision checklist.
       children:
         - type: space
-          key: space-projects
-          title: Hands-on Projects
-          path: projects
+          key: space-labs
+          title: 7. Hands-on Labs
+          path: labs
           default: true
           content:
-            directory: ./projects
+            directory: ./07-labs
         - type: space
-          key: space-practice-questions
-          title: 50 Practice Questions
-          path: questions
+          key: space-revision
+          title: 8. Revision and Practice
+          path: revision
           content:
-            directory: ./mock-interviews
+            directory: ./08-revision
 
     - type: external-link
       key: link-dp-800-study-guide
