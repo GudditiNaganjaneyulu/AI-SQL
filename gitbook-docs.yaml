@@ -1,0 +1,98 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: DP-800 AI-Enabled Database Solutions Study Guide
+  structure:
+    # Step 1 — learn SQL from the ground up before anything else.
+    - type: section
+      key: section-sql-foundations
+      title: 1. SQL Foundations
+      path: sql-foundations
+      description: Start here. Core SQL syntax, tables, filtering, joins, aggregations, subqueries, window functions and CASE, plus a quick-reference cheatsheet.
+      default: true
+      children:
+        - type: space
+          key: space-sql-fundamentals
+          title: SQL Fundamentals
+          path: fundamentals
+          default: true
+          content:
+            directory: ./modules/01-sql-fundamentals
+        - type: space
+          key: space-sql-cheatsheet
+          title: SQL Quick Reference
+          path: cheatsheet
+          content:
+            directory: ./cheatsheets
+
+    # Step 2 — database development and performance once basic queries are comfortable.
+    - type: section
+      key: section-database-development
+      title: 2. Database Development & Performance
+      path: database-development
+      description: CTEs, recursive queries, execution plans, indexing, transactions, isolation levels, locking, partitioning and materialized views.
+      children:
+        - type: space
+          key: space-advanced-sql
+          title: Advanced SQL & Query Optimization
+          path: advanced-sql
+          default: true
+          content:
+            directory: ./modules/02-advanced-sql
+
+    # Step 3 — the Azure SQL platform, security and monitoring.
+    - type: section
+      key: section-azure-sql
+      title: 3. Azure SQL Platform & Security
+      path: azure-sql
+      description: Azure SQL product family, service tiers, Always Encrypted, RLS, Dynamic Data Masking, ledger, Query Store, scale-out and backups.
+      children:
+        - type: space
+          key: space-azure-sql
+          title: Azure SQL & Cloud Features
+          path: platform
+          default: true
+          content:
+            directory: ./modules/04-azure-sql
+
+    # Step 4 — AI capabilities, which build on SQL, indexing and Azure SQL.
+    - type: section
+      key: section-ai-integration
+      title: 4. AI in the Database
+      path: ai-integration
+      description: Embeddings, vector similarity search, ANN vector indexes, hybrid search with RRF, RAG, chat history and calling Azure OpenAI from SQL.
+      children:
+        - type: space
+          key: space-ai-integration
+          title: AI Integration with SQL
+          path: vectors-and-rag
+          default: true
+          content:
+            directory: ./modules/03-ai-integration
+
+    # Step 5 — apply everything, then rehearse for the exam.
+    - type: section
+      key: section-practice-exam-prep
+      title: 5. Practice & Exam Prep
+      path: practice
+      description: Guided hands-on projects that combine every module, followed by 50 practice questions with answers and a scoring guide.
+      children:
+        - type: space
+          key: space-projects
+          title: Hands-on Projects
+          path: projects
+          default: true
+          content:
+            directory: ./projects
+        - type: space
+          key: space-practice-questions
+          title: 50 Practice Questions
+          path: questions
+          content:
+            directory: ./mock-interviews
+
+    - type: external-link
+      key: link-dp-800-study-guide
+      title: Official DP-800 Study Guide
+      description: Microsoft's current skills measured for Exam DP-800, Developing AI-Enabled Database Solutions.
+      url: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-800
